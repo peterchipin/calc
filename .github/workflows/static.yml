@@ -1,0 +1,47 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Limit Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <h1>Credit Limit Calculator</h1>
+    <form id="creditForm">
+      <!-- Входни данни -->
+      <label for="markup">Надценка в %</label>
+      <input type="number" id="markup" required>
+
+      <label for="turnover1">Официален месечен оборот 1 (лв.)</label>
+      <input type="number" id="turnover1" required>
+
+      <label for="turnover2">Официален месечен оборот 2 (лв.)</label>
+      <input type="number" id="turnover2" required>
+
+      <label for="turnover3">Официален месечен оборот 3 (лв.)</label>
+      <input type="number" id="turnover3" required>
+
+      <label for="dailyTurnover">Дневен оборот (лв.)</label>
+      <input type="number" id="dailyTurnover" required>
+
+      <label for="monthlyExpenses">Месечни разходи (лв.)</label>
+      <input type="number" id="monthlyExpenses" required>
+
+      <label for="creditExpenses">Разходи за кредити (лв.)</label>
+      <input type="number" id="creditExpenses" required>
+
+      <!-- Изходни данни -->
+      <div id="output" class="output"></div>
+
+      <button type="button" onclick="calculateCredit()">Изчисли</button>
+      <button type="button" onclick="exportToPDF()">Експорт към PDF</button>
+    </form>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
